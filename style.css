@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: backgroundCycle 20s infinite;
+  transition: background-color 0.5s ease-in-out;
+}
+
+@keyframes backgroundCycle {
+  0%   { background-color: #005f73; }
+  25%  { background-color: #0a9396; }
+  50%  { background-color: #94d2bd; }
+  75%  { background-color: #ee9b00; }
+  100% { background-color: #005f73; }
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px white;
+  animation: boxColorCycle 20s infinite;
+}
+
+@keyframes boxColorCycle {
+  0%   { box-shadow: 0 0 15px #fff; }
+  25%  { box-shadow: 0 0 15px #0a9396; }
+  50%  { box-shadow: 0 0 15px #94d2bd; }
+  75%  { box-shadow: 0 0 15px #ee9b00; }
+  100% { box-shadow: 0 0 15px #fff; }
+}
+
+.title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 10px;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.status {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.reset-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #ddd;
+}
+
+.winning-cell {
+  background-color: #9fffcb !important;
+  color: black !important;
+  font-weight: bold;
+}
